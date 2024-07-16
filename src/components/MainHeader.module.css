@@ -1,0 +1,38 @@
+.headerContainer {
+  border: 1px solid white;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.logo {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  width: 50%;
+  border: 1px solid green;
+}
+
+.logo img {
+  height: 70px;
+  width: 70px;
+  margin: 0 2rem;
+  margin-left: 4rem;
+}
+
+.nav {
+  width: 50%;
+  height: 100%;
+}
+
+.nav ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav li {
+}
