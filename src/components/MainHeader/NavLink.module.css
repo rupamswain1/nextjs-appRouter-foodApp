@@ -1,0 +1,9 @@
+.navLink:hover {
+  color: var(--link-active);
+  text-shadow: 0 0 10px var(--link-shadow);
+}
+
+.active {
+  color: var(--link-active);
+  text-shadow: 0 0 10px var(--link-shadow);
+}

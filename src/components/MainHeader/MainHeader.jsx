@@ -3,7 +3,18 @@ import Image from 'next/image';
 import logoImg from '../../../public/assets/logo.png';
 import styles from './MainHeader.module.css';
 import MainHeaderBackGround from './MainHeaderBackground';
+import NavLinks from './NavLinks.';
 const MainHeader = () => {
+  const navLinks = [
+    {
+      name: 'Browse Meals',
+      href: '/meals',
+    },
+    {
+      name: 'Foodies Community',
+      href: '/community',
+    },
+  ];
   return (
     <>
       <MainHeaderBackGround />
@@ -14,12 +25,11 @@ const MainHeader = () => {
         </Link>
         <nav className={`${styles.nav} subHeaderText`}>
           <ul>
-            <li>
-              <Link href="/meals">Browse Meals</Link>
-            </li>
-            <li>
-              <Link href="/community">Foodies Community</Link>
-            </li>
+            {navLinks.map((linkData) => (
+              <li key={linkData.name}>
+                <NavLinks {...linkData} />
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
