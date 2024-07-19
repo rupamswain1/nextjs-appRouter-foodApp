@@ -5,6 +5,8 @@
 :root {
   --link-active: #e38c22;
   --link-shadow: #edad5f;
+  --font-gradient1: #ff5100;
+  --font-gradient2: #e9943f;
 }
 
 @media (prefers-color-scheme: dark) {

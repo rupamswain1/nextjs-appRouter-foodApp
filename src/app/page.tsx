@@ -8,9 +8,13 @@ export default function Home() {
         <div className={styles.imageSlide}></div>
         <div className={styles.cta}>
           <div>
-            <div>NEXTLEVEL fOOD FOR</div>
-            <div>NEXTLEVEL FOODIES</div>
-            <div>Taste & share foof from all over the world</div>
+            <div className={styles.homeHeader}>
+              <div>NEXTLEVEL FOOD FOR</div>
+              <div>NEXTLEVEL FOODIES</div>
+            </div>
+            <div className={styles.homeSubHeader}>
+              Taste & share foof from all over the world
+            </div>
           </div>
           <div>
             <div>Join the community</div>
