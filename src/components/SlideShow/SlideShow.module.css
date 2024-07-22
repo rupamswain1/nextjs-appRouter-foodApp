@@ -1,0 +1,12 @@
+.slideContainer {
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slideImages {
+  height: 20rem;
+  width: 25rem;
+}

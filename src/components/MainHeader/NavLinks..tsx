@@ -9,7 +9,6 @@ interface Iprops {
 
 const NavLinks: React.FunctionComponent<Iprops> = ({ name, href }) => {
   const path = usePathname();
-  console.log({ path });
   return (
     <Link
       href={href}
