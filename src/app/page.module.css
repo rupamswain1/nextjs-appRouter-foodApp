@@ -17,13 +17,6 @@
   width: 60%;
   font-size: 2.6rem;
   font-weight: bolder;
-  background: -webkit-linear-gradient(
-    45deg,
-    var(--font-gradient1),
-    var(--font-gradient2)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .homeSubHeader {
   padding: 10px 0px 10px 0px;

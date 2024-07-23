@@ -33,6 +33,7 @@ const SlideShow: React.FunctionComponent<slideProps> = ({ images, time }) => {
           index === activeImage && (
             <Image
               className={[styles.slideImages].join(' ')}
+              key={alt}
               src={src}
               alt={alt}
             />

@@ -1,9 +1,9 @@
 .headerContainer {
-  height: 70px;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   flex: 1;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 .logo {
   height: 70px;

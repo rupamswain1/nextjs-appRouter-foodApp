@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import styles from './page.module.css';
 import Button from '@/components/Button/Button';
 import Footer from '@/components/Footer/Footer';
@@ -45,7 +43,7 @@ export default function Home() {
         </div>
         <div className={styles.cta}>
           <div>
-            <div className={styles.homeHeader}>
+            <div className={`${styles.homeHeader} highlightedText`}>
               <div>NEXTLEVEL FOOD FOR</div>
               <div>NEXTLEVEL FOODIES</div>
             </div>
