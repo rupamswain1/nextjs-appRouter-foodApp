@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './page.module.css';
 import Button from '@/components/Button/Button';
+import { getMeals } from '@/lib/meals';
+import Meals from '@/components/Meals/Meals';
 const MealsPage = () => {
+  const meals = getMeals();
   return (
     <>
       <header className={styles.headerContainer}>
@@ -22,7 +25,9 @@ const MealsPage = () => {
           />
         </div>
       </header>
-      <section></section>
+      <main className={styles.main}>
+        <Meals meals={meals} />
+      </main>
     </>
   );
 };

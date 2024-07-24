@@ -5,19 +5,21 @@ interface ButtonProps {
   type?: 'primary' | 'secondary';
   text: string;
   className?: string;
-  as: 'link' | 'button';
-  href?: string;
 }
-const Button: React.FunctionComponent<ButtonProps> = ({
-  type,
-  text,
-  className,
-  as,
-  href,
-}) => {
-  return as === 'link' && href ? (
+interface Links extends ButtonProps {
+  as: 'link';
+  href: string;
+}
+interface Btn extends ButtonProps {
+  as: 'button';
+  onClick?: () => void;
+}
+type props = Links | Btn;
+const Button: React.FunctionComponent<props> = (props) => {
+  const { type, text, className, as } = props;
+  return as === 'link' && props.href ? (
     <Link
-      href={href}
+      href={props.href}
       className={[
         styles.button,
         type === 'primary' ? styles['btn-primary'] : '',
