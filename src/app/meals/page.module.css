@@ -11,3 +11,9 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
+.main {
+  margin-top: 5rem;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,31 @@
+.mealsContainer {
+  width: 25vw;
+  margin-left: 6vw;
+  margin-bottom: 6vh;
+  border-top-left-radius: 80px;
+}
+.mealImage {
+  width: inherit;
+  height: 50vh;
+  position: relative;
+}
+.mealImage img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.mealContent {
+  background-color: rgb(56, 11, 11);
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.summary {
+  padding: 0rem 1rem;
+}
+.cta {
+  align-self: flex-end;
+  margin-right: 1rem;
+}
