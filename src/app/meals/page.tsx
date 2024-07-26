@@ -3,8 +3,8 @@ import styles from './page.module.css';
 import Button from '@/components/Button/Button';
 import { getMeals } from '@/lib/meals';
 import Meals from '@/components/Meals/Meals';
-const MealsPage = () => {
-  const meals = getMeals();
+const MealsPage = async () => {
+  const meals = await getMeals();
   return (
     <>
       <header className={styles.headerContainer}>
