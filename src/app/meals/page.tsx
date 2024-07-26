@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import styles from './page.module.css';
 import Button from '@/components/Button/Button';
 import { getMeals } from '@/lib/meals';
 import Meals from '@/components/Meals/Meals';
-const MealsPage = async () => {
+import Loader from '@/components/Loader/Loader';
+
+async function Meal() {
   const meals = await getMeals();
+  return <Meals meals={meals} />;
+}
+
+const MealsPage = () => {
   return (
     <>
       <header className={styles.headerContainer}>
@@ -26,7 +32,9 @@ const MealsPage = async () => {
         </div>
       </header>
       <main className={styles.main}>
-        <Meals meals={meals} />
+        <Suspense fallback={<Loader />}>
+          <Meal />
+        </Suspense>
       </main>
     </>
   );
