@@ -14,7 +14,7 @@ const MealsPage = () => {
   return (
     <>
       <header className={styles.headerContainer}>
-        <h1 className={styles.heading}>
+        <h1 className="heading">
           Delicious meals, created
           <span className="highlightedText"> by you</span>
         </h1>

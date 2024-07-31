@@ -7,6 +7,7 @@
   --link-shadow: #edad5f;
   --font-gradient1: #ff5100;
   --font-gradient2: #e9943f;
+  --background1: #816258;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,10 +45,15 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .error {
   width: 100%;
   height: 100%;
   text-align: center;
+}
+.heading {
+  font-size: 3rem;
+  font-weight: bolder;
 }
 @layer utilities {
 }

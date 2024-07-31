@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  margin-top: 5rem;
+  height: 50vh;
+}
+.imgContainer {
+  position: relative;
+  width: 45%;
+  margin-left: 10rem;
+}
+.imgContainer > img {
+  border-radius: 10px;
+}
+.headerContent {
+  padding-left: 2rem;
+  padding-right: 10rem;
+}
+.headerContent p {
+  margin: 2rem 0;
+}
+.instructions {
+  margin: 2rem 13rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  background-color: var(--background1);
+}

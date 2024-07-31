@@ -5,6 +5,9 @@ const db = sql('meals.db');
 
 export async function getMeals(): Promise<IMeal[]> {
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  throw new Error('Some error occured');
   return db.prepare('SELECT * FROM meals').all() as IMeal[];
+}
+
+export function getMeal(slug: string): IMeal {
+  return db.prepare('SELECT * FROM meals WHERE slug = ?').get(slug) as IMeal;
 }

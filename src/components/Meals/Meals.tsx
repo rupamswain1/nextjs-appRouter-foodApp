@@ -22,7 +22,7 @@ const Meals: React.FunctionComponent<MealProps> = ({ meals }) => (
                 type="primary"
                 text="View Details"
                 as="link"
-                href="/meals/share"
+                href={`/meals/${meal.slug}`}
               />
             </div>
           </div>

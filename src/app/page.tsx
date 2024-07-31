@@ -52,11 +52,12 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.actionButtons}>
-            <Button type="secondary" text="Join the community" />
+            <Button type="secondary" text="Join the community" as="button" />
             <Button
               type="primary"
               text="Explore Meals"
               className={styles.btnPrimarySpace}
+              as="button"
             />
           </div>
         </div>
