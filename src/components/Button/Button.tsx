@@ -13,6 +13,7 @@ interface Links extends ButtonProps {
 interface Btn extends ButtonProps {
   as: 'button';
   onClick?: () => void;
+  btnType?:'button'|'submit'|undefined;
 }
 type props = Links | Btn;
 const Button: React.FunctionComponent<props> = (props) => {
@@ -35,6 +36,8 @@ const Button: React.FunctionComponent<props> = (props) => {
         type === 'primary' ? styles['btn-primary'] : '',
         className,
       ].join(' ')}
+      type={props?.btnType ?? 'submit'} 
+      onClick={props.onClick}
     >
       {text}
     </button>

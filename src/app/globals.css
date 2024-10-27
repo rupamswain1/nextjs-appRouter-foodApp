@@ -8,6 +8,7 @@
   --font-gradient1: #ff5100;
   --font-gradient2: #e9943f;
   --background1: #816258;
+  --white: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,9 +1,9 @@
 .headerContainer {
-    margin-top: 110px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
   }
 .shareBody{
-    margin-left: 50px;
+    margin-left: 3rem;
     width: 60vw;
 }
 .nameContainer{
@@ -13,14 +13,37 @@
 .labelAndInput{
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
+    
 }
 .labelAndInput textarea{
     height: 15vh;
     background-color: black;
-    outline: 1px solid white;
+    outline: 1px solid var(--white);
+    border-radius: 5px;
 }
 .labelAndInput input{
     background-color: black;
-    outline: 1px solid white;
+    outline: 1px solid var(--white);
+    border-radius: 5px;
+}
+.mealInput{
+    display: none;
+}
+.button{
+    display: flex;
+    justify-content: end;
+}
+.imagePicker{
+    display: flex;
+    height: 10rem;
+    margin-top: -10px;
+}
+.imageBox{
+    width: 10rem;
+    border: 1px dotted var(--white);
+    margin-right: 2rem;
+    padding: 0.25rem;
+    position: relative;
+    overflow: hidden;
 }
