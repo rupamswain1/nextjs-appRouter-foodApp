@@ -1,0 +1,26 @@
+.headerContainer {
+    margin-top: 110px;
+    margin-bottom: 50px;
+  }
+.shareBody{
+    margin-left: 50px;
+    width: 60vw;
+}
+.nameContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.labelAndInput{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.labelAndInput textarea{
+    height: 15vh;
+    background-color: black;
+    outline: 1px solid white;
+}
+.labelAndInput input{
+    background-color: black;
+    outline: 1px solid white;
+}
