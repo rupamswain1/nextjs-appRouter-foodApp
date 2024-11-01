@@ -1,20 +1,10 @@
 import Button from "@/components/Button/Button";
 import styles from "./page.module.css";
 import ImagePicker from "./ImagePicker";
-
+import { addMeal } from "@/lib/actions";
+import MealSubmitButton from "@/components/MealSubmitButton/MealSubmitButton";
 const SharePage = () => {
-  const handleFormSubmit = async (formData)=>{
-    'use server'
-    const meal = {
-      title: formData.get('title'),
-      summary: formData.get('summary'),
-      instructions: formData.get('instructions'),
-      image: formData.get('mealImage'),
-      creator: formData.get('name'),
-      creator_email: formData.get('email')
-    }
-    console.log({meal})
-  }
+
   return (
     <div className={styles.shareBody}>
       <header className={styles.headerContainer}>
@@ -27,7 +17,7 @@ const SharePage = () => {
         </p>
       </header>
       <main className={styles.shareForm + " subHeaderText"}>
-        <form action={handleFormSubmit}>
+        <form action={addMeal}>
           <div className={styles.nameContainer}>
             <p className={styles.labelAndInput}>
               <label htmlFor="name">Your Name</label>
@@ -52,7 +42,7 @@ const SharePage = () => {
           </p>
           <ImagePicker name="mealImage" label="Meal Image" />
           <div className={styles.button}>
-            <Button as="button" type="primary" text="Share Meal" />
+           <MealSubmitButton/>
           </div>
         </form>
       </main>

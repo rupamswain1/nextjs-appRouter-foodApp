@@ -14,11 +14,12 @@ interface Btn extends ButtonProps {
   as: 'button';
   onClick?: () => void;
   btnType?:'button'|'submit'|undefined;
+  disabled ?:boolean;
 }
 type props = Links | Btn;
 const Button: React.FunctionComponent<props> = (props) => {
   const { type, text, className, as } = props;
-  return as === 'link' && props.href ? (
+  return (as === 'link' && props.href) ? (
     <Link
       href={props.href}
       className={[
@@ -36,8 +37,9 @@ const Button: React.FunctionComponent<props> = (props) => {
         type === 'primary' ? styles['btn-primary'] : '',
         className,
       ].join(' ')}
-      type={props?.btnType ?? 'submit'} 
-      onClick={props.onClick}
+      disabled = {'disabled' in props ? props.disabled: false}
+      type={'btnType' in props?props.btnType : 'submit'} 
+      onClick={'onClick' in props ? props.onClick:()=>{}}
     >
       {text}
     </button>
