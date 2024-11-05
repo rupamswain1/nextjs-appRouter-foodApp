@@ -1,10 +1,14 @@
-import Button from "@/components/Button/Button";
+"use client"
 import styles from "./page.module.css";
 import ImagePicker from "./ImagePicker";
 import { addMeal } from "@/lib/actions";
 import MealSubmitButton from "@/components/MealSubmitButton/MealSubmitButton";
-const SharePage = () => {
+import { Istate } from "@/lib/interface/pageInterface";
+import { useFormState } from "react-dom";
+const initialState:Istate = {message:null}
 
+const SharePage = () => {
+  const [state, formAction] = useFormState(addMeal, initialState)
   return (
     <div className={styles.shareBody}>
       <header className={styles.headerContainer}>
@@ -17,7 +21,7 @@ const SharePage = () => {
         </p>
       </header>
       <main className={styles.shareForm + " subHeaderText"}>
-        <form action={addMeal}>
+        <form action={formAction}>
           <div className={styles.nameContainer}>
             <p className={styles.labelAndInput}>
               <label htmlFor="name">Your Name</label>
@@ -41,6 +45,7 @@ const SharePage = () => {
             <textarea id="instructions" name="instructions"/>
           </p>
           <ImagePicker name="mealImage" label="Meal Image" />
+          {state?.message && <p style={{color:'red'}}>{state.message}</p>}
           <div className={styles.button}>
            <MealSubmitButton/>
           </div>
