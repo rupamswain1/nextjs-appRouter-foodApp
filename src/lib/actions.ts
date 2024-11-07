@@ -4,6 +4,7 @@ import { redirect } from "next/navigation"
 import { IsaveMeal } from "./interface/meals"
 import { saveMeal } from "./meals"
 import { shareMealAction } from "./interface/pageInterface"
+import { revalidatePath } from "next/cache"
 
 const invalidText = (text:string) =>{
   return !text && text.trim() === '';
@@ -36,5 +37,6 @@ export const addMeal:shareMealAction = async (prevState,formData)=>{
     }
 
     await saveMeal(meal);
+    revalidatePath('/meals');
     redirect('/meals');
   }
